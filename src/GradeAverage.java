@@ -1,7 +1,7 @@
 /**
  * Exercise 10 (Homework) — GradeAverage
  *
- * Four categories with different weights. Compute the weighted
+ * Five categories with different weights. Compute the weighted
  * average and print it to one decimal place.
  *
  *   Homework   15%
@@ -21,7 +21,8 @@ public class GradeAverage {
         double project = 90;
         double participation = 100;
 
-        // Your code here
+        double gradeAverage = (homework * 0.15) + (classwork * 0.25) + (tests * 0.25) + (project * 0.25) + (participation * 0.10);
+        System.out.println(Math.round(gradeAverage * 10) / 10.0);
 
     }
 }

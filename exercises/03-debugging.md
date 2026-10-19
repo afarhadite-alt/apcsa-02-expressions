@@ -10,10 +10,10 @@ For each: what type of error, what the message said (or didn't), and what was ac
 
 | | |
 |---|---|
-| **Error type** (syntax / runtime / logic) | |
-| **Message Java gave** | |
-| **What was actually wrong** | |
-| **The fix** | |
+| **Error type** (syntax / runtime / logic) | Syntax |
+| **Message Java gave** | src/DebugMe1.java:5: error: ';' expected |
+| **What was actually wrong** | missing an expected semicolon |
+| **The fix** | add a seminicolon at the end of line 5 |
 
 ---
 
@@ -21,9 +21,10 @@ For each: what type of error, what the message said (or didn't), and what was ac
 
 | | |
 |---|---|
-| **Error type** | |
-| **Message** | |
-| **What was wrong** | |
+| **Error type** |  Syntax |
+| **Message** | src/DebugMe2.java:6: error: ';' expected, and src/DebugMe2.java:5: error: incompatible types: String cannot be converted to int
+        int age = "17"; |
+| **What was wrong** |  |
 | **The fix** | |
 
 ---
@@ -32,9 +33,9 @@ For each: what type of error, what the message said (or didn't), and what was ac
 
 | | |
 |---|---|
-| **Error type** | |
-| **Message** | |
-| **What was wrong** | |
+| **Error type** | Syntax |
+| **Message** | error: incompatible types |
+| **What was wrong** |  |
 | **The fix** | |
 
 ---
@@ -43,7 +44,17 @@ For each: what type of error, what the message said (or didn't), and what was ac
 
 | | |
 |---|---|
-| **Error type** | |
+| **Error type** |  error: cannot find symbol
+        double average = totalscore / numTests;
+                         ^
+  symbol:   variable totalscore
+  location: class DebugMe4
+src/DebugMe4.java:9: error: cannot find symbol
+        System.out.println("Average: " + Average);
+                                         ^
+  symbol:   variable Average
+  location: class DebugMe4
+2 errors |
 | **Message** | |
 | **What was wrong** | |
 | **The fix** | |
@@ -56,7 +67,7 @@ For each: what type of error, what the message said (or didn't), and what was ac
 
 | | |
 |---|---|
-| **Error type** | |
+| **Error type** | Logic |
 | **What output did you expect?** | |
 | **What output did you get?** | |
 | **What was actually wrong** | |
